@@ -5,9 +5,6 @@ Welcome to my GitHub portfolio! I am Jeremy Pérez, a data analyst with expertis
 ## 🚀 About Me
 I have a degree in Occupational Safety and Health and hold certifications in data analysis from renowned institutions such as Google, Microsoft, and the University of Michigan. I am passionate about extracting valuable insights from data to drive informed decision-making.
 
-🔗 **LinkedIn**: [jeremyperezz](https://www.linkedin.com/in/jeremyperezz)
-
-📧 **Email**: tylex2000@gmail.com
 
 ## 🛠️ Skills
 - **Microsoft Excel** (Pivot Tables, Power Query, Macros)
