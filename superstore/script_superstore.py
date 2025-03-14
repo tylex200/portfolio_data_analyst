@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.ticker import PercentFormatter 
+from matplotlib.ticker import FuncFormatter, PercentFormatter
 import seaborn as sns
 
 # Load the dataset
@@ -20,6 +20,12 @@ df['Profit'] = pd.to_numeric(df['Profit'], errors='coerce')
 df['Discount'] = pd.to_numeric(df['Discount'], errors='coerce')
 df['Quantity'] = pd.to_numeric(df['Quantity'], errors='coerce')
 
+# Function to format y-axis as currency without decimals
+def currency_format(x, _):
+    return f'${x:,.0f}'  # Elimina los decimales
+
+formatter = FuncFormatter(currency_format)
+
 # Aggregate sales by month
 df['Year-Month'] = df['Order Date'].dt.to_period('M')
 monthly_sales = df.groupby('Year-Month')['Sales'].sum()
@@ -30,6 +36,10 @@ monthly_sales.plot(kind='line', marker='o', color='b')
 plt.title('Sales Trends Over Time')
 plt.xlabel('Year-Month')
 plt.ylabel('Total Sales')
+
+# Apply currency format
+plt.gca().yaxis.set_major_formatter(formatter)
+
 plt.grid(True)
 plt.show()
 
@@ -42,6 +52,10 @@ sns.barplot(x=segment_sales.index, y=segment_sales.values, palette="Blues_r")
 plt.title('Sales by Customer Segment')
 plt.xlabel('Customer Segment')
 plt.ylabel('Total Sales')
+
+# Apply currency format
+plt.gca().yaxis.set_major_formatter(formatter)
+
 plt.show()
 
 # Scatter plot of discount vs. profit
@@ -51,8 +65,9 @@ plt.title('Impact of Discount on Profit')
 plt.xlabel('Discount')
 plt.ylabel('Profit')
 
-# Format x-axis as percentages
+# Format x-axis as percentages and y-axis as currency
 plt.gca().xaxis.set_major_formatter(PercentFormatter(1.0))  # 1.0 means 100%
+plt.gca().yaxis.set_major_formatter(formatter)
 
 plt.grid(True)
 plt.show()
