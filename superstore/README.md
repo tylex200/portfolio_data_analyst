@@ -242,9 +242,8 @@ customers contributes disproportionately to total sales.
 - **Loyal customers contribute significantly to total sales**,
   suggesting a need for retention strategies.
 
-![Gráfico, Gráfico de barras El contenido generado por IA puede ser
-incorrecto.](media/image2.png){width="4.906778215223097in"
-height="3.066666666666667in"}
+![graphic](images/figura2.png)
+
 
 **💰 Profitability Insights**
 
@@ -256,9 +255,7 @@ height="3.066666666666667in"}
 - Orders with **higher quantities tend to be more profitable**,
   suggesting bundling strategies could be effective.
 
-![Gráfico El contenido generado por IA puede ser
-incorrecto.](media/image3.png){width="6.003472222222222in"
-height="3.752083333333333in"}
+![graphic](images/figura3.png)
 
 **How will these insights help answer your business questions?**
 
@@ -302,7 +299,8 @@ The best way to communicate is through clear and visually appealing data
 visualizations that present key insights concisely. **Dashboards** will
 make the findings more engaging and easier to understand.
 
-Refer to dashboard_superstore.pbix
+![graphic](images/figura4.png)
+
 
 **FINAL CONCLUSION**
 
