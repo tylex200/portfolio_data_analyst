@@ -231,9 +231,8 @@ customers contributes disproportionately to total sales.
 - Some **regions perform better** in sales but struggle with
   profitability.
 
-> ![Gráfico, Gráfico de líneas El contenido generado por IA puede ser
-> incorrecto.](media/image1.png){width="5.968669072615923in"
-> height="3.175in"}
+> ![grafico de lineas](images/figura1.png)
+
 
 **🎯 Customer Segmentation Analysis**
 
