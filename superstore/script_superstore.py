@@ -44,6 +44,28 @@ plt.gca().yaxis.set_major_formatter(formatter)
 plt.grid(True)
 plt.show()
 
+# Get top 10 products by sales
+top_products_sales = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(10)
+
+# Create figure
+plt.figure(figsize=(14, 8))
+ax = sns.barplot(x=top_products_sales.values, y=top_products_sales.index, palette="Blues_r")
+
+# Titles and labels
+plt.title("Top 10 Products by Sales", fontsize=16)
+plt.xlabel("Total Sales", fontsize=14)
+plt.ylabel("Product Name", fontsize=14)
+
+# Apply currency format to x-axis
+plt.gca().xaxis.set_major_formatter(formatter)
+
+# Wrap long product names into multiple lines
+wrapped_labels = [textwrap.fill(name, width=30) for name in top_products_sales.index]
+ax.set_yticklabels(wrapped_labels)  
+
+# Show plot
+plt.show()
+
 # Aggregate sales by customer segment
 segment_sales = df.groupby('Segment')['Sales'].sum().sort_values(ascending=False)
 
@@ -73,27 +95,8 @@ plt.gca().yaxis.set_major_formatter(formatter)
 plt.grid(True)
 plt.show()
 
-# Print summary statistics
-print(df[['Discount', 'Profit']].describe())
+# Calculate correlation between Discount and Profit
+correlation = df[['Discount', 'Profit']].corr()
+print(correlation)
 
-# Get top 10 products by sales
-top_products_sales = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(10)
 
-# Create figure
-plt.figure(figsize=(14, 8))
-ax = sns.barplot(x=top_products_sales.values, y=top_products_sales.index, palette="Blues_r")
-
-# Titles and labels
-plt.title("Top 10 Products by Sales", fontsize=16)
-plt.xlabel("Total Sales", fontsize=14)
-plt.ylabel("Product Name", fontsize=14)
-
-# Apply currency format to x-axis
-plt.gca().xaxis.set_major_formatter(formatter)
-
-# Wrap long product names into multiple lines
-wrapped_labels = [textwrap.fill(name, width=30) for name in top_products_sales.index]
-ax.set_yticklabels(wrapped_labels)
-
-# Show plot
-plt.show()
