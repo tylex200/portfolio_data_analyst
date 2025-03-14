@@ -233,6 +233,7 @@ customers contributes disproportionately to total sales.
 
 > ![grafico de lineas](images/figura1.png)
 
+![grafico de lineas](images/figura5.png)
 
 **🎯 Customer Segmentation Analysis**
 
@@ -256,6 +257,7 @@ customers contributes disproportionately to total sales.
   suggesting bundling strategies could be effective.
 
 ![graphic](images/figura3.png)
+
 
 **How will these insights help answer your business questions?**
 
