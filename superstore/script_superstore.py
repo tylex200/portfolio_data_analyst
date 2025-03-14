@@ -2,9 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter, PercentFormatter
 import seaborn as sns
+import textwrap
 
 # Load the dataset
-file_path = "superstore/superstore1.csv"
+file_path = "superstore1.csv"
 df = pd.read_csv(file_path, encoding_errors='ignore')
 
 # Convert date columns to datetime format
@@ -75,3 +76,24 @@ plt.show()
 # Print summary statistics
 print(df[['Discount', 'Profit']].describe())
 
+# Get top 10 products by sales
+top_products_sales = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(10)
+
+# Create figure
+plt.figure(figsize=(14, 8))
+ax = sns.barplot(x=top_products_sales.values, y=top_products_sales.index, palette="Blues_r")
+
+# Titles and labels
+plt.title("Top 10 Products by Sales", fontsize=16)
+plt.xlabel("Total Sales", fontsize=14)
+plt.ylabel("Product Name", fontsize=14)
+
+# Apply currency format to x-axis
+plt.gca().xaxis.set_major_formatter(formatter)
+
+# Wrap long product names into multiple lines
+wrapped_labels = [textwrap.fill(name, width=30) for name in top_products_sales.index]
+ax.set_yticklabels(wrapped_labels)
+
+# Show plot
+plt.show()
