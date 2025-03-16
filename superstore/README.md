@@ -64,19 +64,28 @@ To address these challenges, we analyze:
 🔹 **Technology** products contribute the most to revenue.  
 🔹 Some **regions generate high sales but struggle with low profitability**.
 
+  ![figura1](images/figura1.png)
+  ![figura1](images/figura5.png)
+
 ### **🎯 2. Customer Segmentation Insights**
 🔹 **Corporate clients** generate higher revenue than individuals.  
 🔹 A small segment of customers drives a **large share of sales**.  
 🔹 **Loyalty programs** can help retain high-value customers.
+
+![figura1](images/figura2.png)
 
 ### **💰 3. Profitability & Discount Analysis**
 🔹 High **discounts significantly reduce profit margins**.  
 🔹 Some **products have negative profit despite high sales**.  
 🔹 Orders with **higher quantities tend to be more profitable** (suggesting bundling strategies could help).
 
+![figura1](images/figura3.png)
+
 ### **🌍 4. Regional Performance**
 🔹 Certain **regions underperform in profitability despite high sales**.  
 🔹 Adjusting pricing or marketing strategies could improve results.
+
+![figura1](images/figura4.png)
 
 ---
 
